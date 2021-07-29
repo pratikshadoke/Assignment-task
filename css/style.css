@@ -1,0 +1,330 @@
+/*Common code for both pages starts here*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+body {
+  background: rgba(136, 14, 79,1);
+  padding: 15px;
+}
+.common-box,.btn-box,.space,.info-box
+{
+min-height: fit-content;
+width:100%;
+display: flex;
+justify-content:center;
+align-items: center;
+color:#fff;
+background: rgba(240, 98, 146,0.1) !important;
+flex-direction: column;
+border-radius: 5px ;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+overflow: hidden;
+}
+.btn-box
+{
+    min-height: fit-content;
+    flex-direction: row;
+    background: none !important;
+    border:none;
+}
+.text-center
+{
+    text-align: center;
+}
+.text-box
+{
+    margin: 20px;
+}
+/*To make image rounded code starts here*/
+.img-response
+{
+    width: 300px;
+    clip-path: circle(50%);
+}
+/*To make image rounded code ends here*/
+/*To create glassmorphism effect code starts here*/
+.glassy
+{
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+/*To create glassmorphism effect code ends here*/
+
+.common-box::after
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(20% at right top);
+    background: rgba(219, 60, 129, 0.671);
+    z-index: -1;
+    /* background: rgba( 233, 30, 99, 0.25 ) !important; */
+}
+/*Navigation part starts*/
+header
+{
+    position: relative;
+    max-width: 1200px;
+    margin:20px auto;
+    padding:10px;
+    box-sizing: border-box;
+    background: rgba(133, 193, 233,0.1) !important;
+}
+.title
+{
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bold;
+    color:#fff;
+    float: left;
+    height:60px;
+    line-height: 60px;
+    
+}
+
+.logo
+{
+    margin:0px 5px;
+    background:rgba(244, 143, 177);
+    padding:2px 5px;
+    border-radius: 50%;
+    color:#fff;
+    border: 1px solid #fff;
+    
+}
+ nav
+{
+    float: right;
+    transition: 0.5s;
+}
+nav ul
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: .5s;
+}
+.clearfix
+{
+    clear: both;
+}
+  nav ul .nav-item
+ {
+     list-style: none;
+ }
+  nav ul .nav-item .nav-link
+ {   
+     color:#fff;
+     display: block;
+     margin: 10px 2px;
+     padding:10px 10px;
+     text-decoration: none;
+ }
+ 
+ nav ul .nav-item .nav-link .uil
+ {
+     margin:0px 2px;
+ }
+ nav ul .nav-item .nav-link.not-active{
+    border-bottom: 1px solid none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 20px none;
+    transition: all 0.5s linear;
+ }
+ nav ul .nav-item .nav-link.active,
+ nav ul .nav-item .nav-link:hover
+ {
+     border:1px solid #fff;
+border-bottom: 2px solid rgba( 255, 255, 255, 0.18 );
+border-radius: 10px;
+box-shadow: 0px 2px 20px rgba(75, 100, 241, 0.521);
+transition:  0.5s alternate forwards;
+}
+/*Navigation part ends*/ 
+/*Common code for both pages ends here*/
+/*Index(home-page) code ends here*/
+.btn {
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    padding: 5px 20px;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: #AD1457 !important;
+    border: 1px solid #fff;  
+    cursor: pointer;   
+    
+}
+.btn:hover,
+.btn:active,
+.btn:focus
+{
+    letter-spacing: 4px;
+}
+.space {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    margin:5px;
+}
+.hide::after
+{
+    display: none;
+}
+/*Index(home-page) code ends here*/
+/* Code to hide typewriter text part starts*/
+.text-slider-items
+{
+    display: none;
+}
+/* Code to hide typewriter text part ends*/
+/*Codetation part starts*/
+.codetation-text
+{
+    margin-top: 50px;
+}
+.info-box
+{
+    justify-content: space-around;
+    height: fit-content;
+    flex-direction: row;
+    background: none !important;
+    border: none;
+    padding: 50px;
+}
+/*Animation part in Codetation page starts*/
+
+.imp-text svg path
+{
+    fill:#fff;
+    margin-top: 0px;
+    stroke:#fff;
+    stroke-dasharray: 1620;
+    stroke-dashoffset: 1620;
+    animation:codetext 4s infinite linear forwards;
+} 
+@keyframes codetext {
+    0%
+    {
+        
+        stroke-dashoffset: 0;
+        fill:none;
+    }
+    40%
+    {
+        stroke-dashoffset: 1620;
+        fill:none;
+    }
+    80%
+    {
+        stroke-dashoffset: 3240;
+        
+        
+    }
+    100%
+    {
+   stroke-dashoffset: 3240;
+   fill:none
+   
+   
+    }
+}
+/*Animation part in Codetation page ends*/
+/*Codetation part ends*/
+
+ @media (max-width:1200px)
+ {
+     header
+     {
+         margin: 20px;
+     }
+ }
+/*Responsive code starts here*/
+
+ @media (max-width:970px)
+ {
+    .menu-toggler
+ {
+    
+    display: block;
+    width:40px;
+    height: 40px;
+    margin: 10px;
+    background:#AD1457;
+    float:right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color:#fff;
+ } 
+ .menu-toggler::before
+ {
+     content: '\f0c9';
+     font-family: fontAwesome;
+     line-height: 40px;
+ }
+ .menu-toggler.active::before
+ {
+     content: '\f00d';
+     
+ }
+ nav 
+ {
+     display: none;
+ }
+nav.active
+{
+    display: block;
+    width: 100%;
+    
+}
+nav.active ul
+     {
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction:column ;
+         text-align: center;
+     }
+     nav.active ul li
+     {
+         width: fit-content;
+         
+     } 
+     .info-box,.btn-box
+     {
+         flex-direction: column;
+     }
+    } 
+/*Responsive code ends here*/
+
+
+
+
+
+
+
+
+
+
+
+
